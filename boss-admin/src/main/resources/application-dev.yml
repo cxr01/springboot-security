@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:mysql://129.204.32.148:3306/boss?useUnicode=true&characterEncoding=UTF-8&useSSL=false&autoReconnect=true&failOverReadOnly=false&serverTimezone=GMT%2B8
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+custom:
+  config:
+    ignores:
+      # 需要过滤的 post 请求
+      post:
+        - "/admin/auth/login"
+        - "/admin/auth/logout"
+      # 需要过滤的请求，不限方法
+      pattern:
+        - "/test/*"
